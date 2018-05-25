@@ -10,7 +10,7 @@ function readyNow() {
 function addQuote() {
     console.log( 'in addQuote' );
     let objectToSend = {
-        text: $( '#text' ).val()
+        text: $( '#text' ).val(),
         author: $( '#author' ).val()
     }; // end objectToSend
     console.log('sending:', objectToSend );
@@ -28,7 +28,7 @@ function displayQuote( quotes ){
     let el = $( '#quotesOut' );
     el.empty();
     for( quote of quotes ){
-        el.append( '<div>' + quote.name + '</div>')
+        el.append( '<div class="cardBody">' + quote.author + ': ' + quote.text + '</div>')
     }
 }
 
